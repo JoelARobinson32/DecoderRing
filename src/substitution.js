@@ -17,6 +17,8 @@ const substitutionModule = (function () {
                 if (current === alphabet[n]) { return false }
             }
         }
+        //Fixes a bug where if only the last two characters repeat, it doesn't catch it.
+        if (alphabet[24] === alphabet[25]) { return false }
 
 
         //array for the lowercase alphabet
